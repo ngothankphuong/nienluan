@@ -1,0 +1,159 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Trang chủ</title>
+    <link rel="stylesheet" href="{{url_for('static', filename='style/style.css')}}">
+    <meta name="viewport" content="initial-scale=1,maximum-scale=1,user-scalable=no">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.7.1/jquery.min.js"
+        integrity="sha512-v2CJ7UaYy4JwqLDIrZUI/4hqeoQieOmAZNXBeQyjo21dadnwR+8ZaIJVT8EE2iyI61OV8e6M8PP2/4hpQINQ/g=="
+        crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
+    <link rel="stylesheet" href="../static/style/style_index.css">
+
+    <link rel="stylesheet" href="htpps://pyscript.net/alpha/pyscript.css" />
+    <script defer src="htpps://pyscript.net/alpha/pyscript.js"></script>
+    <link rel="stylesheet" href="">
+
+    <style>
+        /* CHAT BOT */
+        .chat-sign-button {
+            width: 50px;
+            height: 50px;
+            font-size: 24px;
+        }
+
+        #chat-widget-messages {
+            max-height: 400px;
+            overflow-y: scroll;
+            scroll-behavior: smooth;
+            
+        }
+
+        .chat-widget-button {
+            width: 50px;
+            height: 50px;
+            background-color: transparent;
+            background-image: url('../static/img/chat-bot-logo.jpg');
+            background-size: cover;
+            background-position: center;
+            border: none;
+            border-radius: 50%;
+            position: fixed;
+            bottom: 20px;
+            left: 20px;
+            cursor: pointer;
+        }
+
+        /* END CHAT BOT */
+    </style>
+
+</head>
+
+<body>
+
+    <!-- MENU OVERLAY -->
+    <div class="overlay overlay-slide-left" id="overlay">
+        <!-- MENU ITEMS -->
+        <nav>
+            <ul>
+                <li id="nav-1" class="slide-out-1 center">
+                    <a href="#home" class="center">Home</a>
+                </li>
+                <li id="nav-2" class="slide-out-2 center">
+                    <a href="/login" class="center">Login Admin</a>
+                </li>
+                <li id="nav-3" class="slide-out-3 center">
+                    <a href="#skills" class="center">Contact</a>
+                </li>
+                <li id="nav-4" class="slide-out-4 center">
+                    <a href="#projects" class="center"></a>
+                </li>
+                <li id="nav-5" class="slide-out-5 center">
+                    <a href="#contact" class="center"></a>
+                </li>
+            </ul>
+        </nav>
+    </div>
+    <!-- HAMBURGER MENU -->
+    <div class="hamburger-menu" id="hamburger-menu">
+        <div class="menu-bar1"></div>
+        <div class="menu-bar2"></div>
+        <div class="menu-bar3"></div>
+    </div>
+
+    <div class="container">
+        <!-- <a class="btn btn-sm btn-danger" href="/create_page">Tạo mã QR</a>
+        <a class="btn btn-sm btn-success" href="/manage">Quản lý mã QR</a> -->
+
+        <div id="container">
+            <img id="camera_frame" class="border border-danger" src="{{ url_for('video_feed') }}" alt="Camera Feed"
+                width="600" height="400">
+
+        </div>
+        <div id="group-btn">
+            <button value="bat" id="on-btn" class="btn btn-success me-3 mt-3">Bật</button>
+            <button value="tat" id="off-btn" class="btn btn-danger mt-3">Tắt</button>
+        </div>
+
+         <!--Quet ma qr tu hinh anh  -->
+        <div class="scan_img d-flex justify-content-center mt-5">
+            <form action="/scanimage" method="POST" enctype="multipart/form-data">
+                <label for="scan_img">Quét mã QR từ tệp : </label>
+                <input type="file" id="scan_img" name="scan_img" required>
+
+                <button type="submit">Quét mã</button>
+            </form>
+        </div>
+    </div>
+    <button id="chat-widget-button" type="button"
+        class="chat-widget-button rounded-circle position-fixed chat-sign-button"
+        style="bottom: 20px; left:20px;"></button>
+
+    <!-- chat bot -->
+    <div id="chat-widget" class="card position-fixed shadow d-none" style="bottom: 100px; left:20px; width:300px; ">
+        <div class="card-header bg-primary text-white">
+            Bot Travel Can Tho
+            <button id="chat-widget-close-button" type="button" class="btn-close float-end" aria-label="Close"></button>
+        </div>
+        <div class="card-body" id="chat-widget-messages">
+            <!-- chat message append -->
+        </div>
+        <div class="card-footer">
+            <input type="text" class="form-control" id="chat-widget-input" placeholder="Type your message...">
+        </div>
+    </div>
+
+
+    <!-- The Modal -->
+    <!-- Trigger the Modal -->
+    <!-- <img class="myImg" src="https://static.kinhtedothi.vn/w960/images/upload/2022/10/10/3aa3f7ac1cbfdbe182ae.jpg" alt="Trolltunga, Norway" width="300" height="200">
+    <img class="myImg" src="https://st.depositphotos.com/1007989/1360/i/950/depositphotos_13604679-stock-illustration-letters-shapes-and-crayons.jpg" alt="Trolltunga, Norway" width="300" height="200"> -->
+
+    <!-- The Modal -->
+    <div id="myModal" class="modal">
+        <span class="close" onclick="document.getElementById('myModal').style.display='none'">&times;</span>
+        <img class="modal-content" id="img01">
+    </div>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM" crossorigin="anonymous">
+    </script>
+    <script src="https://code.jquery.com/jquery-3.7.1.min.js"
+        integrity="sha256-/JqT3SQfawRcv/BIHPThkBvs0OEvtFFmqPF/lYI/Cxo=" crossorigin="anonymous"></script>
+
+    <script src="../static/js/tat_cam.js"></script>
+    <script src="../static/js/index.js"></script>
+    <script src="../static/js/bat_cam.js"></script>
+    <script src="../static/js/chat_bot_rasa.js"></script>
+    <script src="../static/js/modal_image.js"></script>
+    <script src="https://www.gstatic.com/dialogflow-console/fast/messenger/bootstrap.js?v=1"></script>
+    <df-messenger intent="WELCOME" chat-title="Bot-Du-Lich" agent-id="84c9f868-c285-484b-8ae0-9d431039bd9f"
+        language-code="vi"></df-messenger>
+
+</body>
+
+</html>

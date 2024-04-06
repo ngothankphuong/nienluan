@@ -1,0 +1,106 @@
+version: "3.1"
+
+intents:
+  - greet
+  - goodbye
+  - thank
+  - order_pizza
+  - order_food
+  - inform_food
+  - deny
+  - affirm
+  - mood_great
+  - mood_unhappy
+  - bot_challenge
+  - find_CanThoUn
+  - find_BenNinhKieu
+  - find_ChoNoi
+  - find_HungKingTemple
+  - img_CanThoUn
+  - img_BenNinhKieu
+  - img_ChoNoi
+  - img_HungKingsTemple
+  
+
+entities:
+  - food
+  - CanThoUn
+  - benninhkieu
+  - chonoi
+  - HungKingTemple
+
+responses:
+  utter_greet:
+  - text: "Hey! Can i help you?"
+
+  utter_ask:
+  - text: "Do you want to find any other places?"
+
+  utter_goodbye:
+  - text: "Bye"
+
+  utter_ask_address:
+  - text: "Which location do you want to find?"
+
+  utter_suggest:
+  - text: "You can go to Can Tho University, Ben Ninh Kieu, Floating a Tooth, Hung Vuong Temple,..."
+
+  utter_CanThoUn:
+  - text : "https://s.net.vn/2Rvr"
+  
+  utter_ChoNoiCaiRang:
+  - text: "https://s.net.vn/VwBy"
+
+  utter_BenNinhKieu:
+  - text: "https://s.net.vn/nvzu"
+
+  utter_DenHung:
+  - text: "https://s.net.vn/YSY9"
+
+  utter_img_CanThoUn:
+  - text: "https://static.kinhtedothi.vn/w960/images/upload/2022/10/10/3aa3f7ac1cbfdbe182ae.jpg"
+  - text: "https://www.ctu.edu.vn/images/2022/08/12/hitech-2.jpg"
+  - text: "http://thongtintuyensinh247.com/wp-content/uploads/2023/08/%C4%90HCT.jpg"
+  - text: "https://tuyensinh.tvu.edu.vn/uploads/news/2021_07/dh-can-tho.jpg"
+  - text: "https://xdcs.cdnchinhphu.vn/446259493575335936/2023/7/23/dhct6-1690081725933911028070.jpg"
+
+  utter_img_BenNinhKieu:
+  - text: "https://statics.vinpearl.com/ben-ninh-kieu-6_1624326951.jpg"
+  - text: "https://statics.vinpearl.com/ben-ninh-kieu-7_1624326995.png"
+  - text: "https://statics.vinpearl.com/ben-ninh-kieu-12_1624327152.jpg"
+  - text: "https://statics.vinpearl.com/du-thuyen-can-tho-1_1624343601.jpg"
+  - text: "https://vemekong.com/wp-content/uploads/2021/12/ninh-kieu-wharf-can-tho-14a.jpg"
+  - text: "https://vemekong.com/wp-content/uploads/2021/12/ninh-kieu-wharf-can-tho-6a.jpg"
+  - text: "https://vemekong.com/wp-content/uploads/2021/12/ninh-kieu-walking-street-can-tho-6a-2.jpg"
+
+  utter_img_ChoNoiCaiRang:
+  - text: "https://media-cdn-v2.laodong.vn/Storage/NewsPortal/2021/8/25/946185/Can-Tho-10.jpg"
+  - text: "https://media-cdn-v2.laodong.vn/Storage/NewsPortal/2021/8/25/946185/Can-Tho-9.jpg"
+  - text: "https://phuotvivu.com/blog/wp-content/uploads/2021/06/cho-noi-cai-rang-1.jpg"
+  - text: "https://cuongdulich.com/assets/posts/1572320445-sapa_3.jpg"
+
+  utter_img_HungKingTemple:
+  - text: "https://static.tuoitrenews.vn/ttnew/r/2022/04/07/den-tho-1-16492555772841398601493-1649323203.jpg"
+  - text: "https://vietnamtimes.org.vn/stores/news_dataimages/nhungnlh/042022/09/10/1609_ps2.jpg?rt=20220409113518.jpg"
+  - text: "https://vietnamtimes.org.vn/stores/news_dataimages/nhungnlh/042022/09/10/1607_ps3.jpg?rt=20220409113304.jpg"
+  - text: "https://vietnamtimes.org.vn/stores/news_dataimages/nhungnlh/042022/09/10/1605_ps4.jpg?rt=20220409113320.jpg"
+  - text: "https://vietnamtimes.org.vn/stores/news_dataimages/nhungnlh/042022/09/10/1610_ps1.jpg?rt=20220409113451.jpg"
+  - text: "https://vietnamtimes.org.vn/stores/news_dataimages/nhungnlh/042022/09/10/1604_ps5.jpg?rt=20220409113351.jpg"
+
+
+
+  utter_thank:
+  - text: "Glad to serve you !!!"
+
+  utter_iamabot:
+  - text: "I am a rasa robot that helps find tourist destinations."
+
+actions:
+  - action_extract_food_entity
+  - action_order_food
+  - action_confirm_order
+  - action_askAddress
+
+session_config:
+  session_expiration_time: 60
+  carry_over_slots_to_new_session: true

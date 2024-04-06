@@ -1,0 +1,191 @@
+version: "3.1"
+
+nlu:
+- intent: greet
+  examples: |
+    - hey
+    - hello
+    - hi
+    - hello there
+    - good morning
+    - good evening
+    - moin
+    - hey there
+    - let's go
+    - hey dude
+    - goodmorning
+    - goodevening
+    - good afternoon
+
+- intent: goodbye
+  examples: |
+    - cu
+    - good by
+    - cee you later
+    - good night
+    - bye
+    - goodbye
+    - have a nice day
+    - see you around
+    - bye bye
+    - see you later
+    - good bye
+    - see you later
+    - bye
+    - goodbye
+    - bye bye
+    - have a nice day
+    - good night
+
+- intent: thank
+  examples: |
+    - thanks
+    - thank you
+    - many thanks
+    - appreciate it
+
+- intent: order_pizza
+  examples: |
+    - give my [pizza](food)
+    - i want [pizza](food)
+    - can i get a [pizza](food)
+    - let's order [pizza](food)
+    - how about a [pizza](food)
+
+- intent: order_food
+  examples: |
+    - i want to order a food
+    - can i get some food, please
+    - let's order some food
+
+- intent: inform_food
+  examples: |
+    - [steak](food)
+    - [orange](food)
+    - [salad](food)
+    - [sushi](food)
+    - [pasta](food)
+    - [pho](food)
+
+- intent: deny
+  examples: |
+    - no
+    - n
+    - never
+    - i don't think so
+    - don't like that
+    - no way
+    - not really
+
+- intent: affirm
+  examples: |
+    - yes
+    - y
+    - ok
+    - oke
+    - okay
+    - of course
+    - correct
+    - that sounds good
+
+- intent: mood_great
+  examples: |
+    - perfect
+    - great
+    - amazing
+    - feeling like a king
+    - wonderful
+    - i am great
+    - i am amazing
+    - i am feeling very good
+
+- intent: mood_unhappy
+  examples: |
+    - i am sad
+    - so sad
+    - i am borring
+    - sad
+    - verry sad
+    - i want go to somewhere
+    - not good
+    - unhappy
+    - I want to go out
+    - I want to go for a walk
+
+- intent: bot_challenge
+  examples: |
+    - are you bot?
+    - are you human
+    - am i talking to a bot?
+    - am i talking to a human?
+
+- intent: find_CanThoUn
+  examples: |
+    - the way to [Can Tho University](CanThoUn)
+    - The route to [Can Tho University](CanThoUn)
+    - How to get to [Can Tho University](CanThoUn)
+    - The way to reach [Can Tho University](CanThoUn)
+    - Locating [Can Tho University](CanThoUn)
+    - Can Tho University
+    - cantho university
+    - go to [can tho university](CanThoUn)
+
+- intent: find_ChoNoi
+  examples: |
+    - the way to [cai rang floating market](chonoi)
+    - The route to [cai rang floating market](chonoi)
+    - How to get to [cai rang floating market](chonoi)
+    - The way to reach [cai rang floating market](chonoi)
+    - Locating [cai rang floating market](chonoi)
+    - cai rang floating market
+    - go to [cai rang floating market](chonoi)
+
+
+- intent: find_BenNinhKieu
+  examples: |
+    - the way to [Ninh Kieu wharf](benninhkieu)
+    - The route to [Ninh Kieu wharf](benninhkieu)
+    - How to get to [Ninh Kieu wharf](benninhkieu)
+    - The way to reach [Ninh Kieu wharf](benninhkieu)
+    - Locating [Ninh Kieu wharf](benninhkieu)
+    - go to [ninh kieu wharf](benninhkieu)
+
+- intent: find_HungKingTemple
+  examples: |
+    - the way to [hung king's temple](HungKingTemple)
+    - The route to [hung king temple](HungKingTemple)
+    - How to get to [hung king's temple](HungKingTemple)
+    - The way to reach [hung king temple](HungKingTemple)
+    - Locating [hung king's temple](HungKingTemple)
+    - go to [hung kings temple](HungKingTemple)
+
+- intent: img_CanThoUn
+  examples: |
+    - the picture of [can tho university](CanThoUn)
+    - image of [can tho university](CanThoUn)
+    - i want to see pictures of [Can tho university](CanThoUn)
+    - i want to see [Can tho university](CanThoUn)
+
+- intent: img_BenNinhKieu
+  examples: |
+    - the picture of [ninh kieu wharf](benninhkieu)
+    - image of [ninh kieu wharf](benninhkieu)
+    - img [ninh kieu wharf](benninhkieu)
+    - I want to see pictures of [Ninh Kieu wharf](benninhkieu)
+    - I want to see [Ninh Kieu wharf](benninhkieu)
+
+- intent: img_ChoNoi
+  examples: |
+    - the picture of [Cai Rang foating market](chonoi)
+    - image of [cai rang floating market](chonoi)
+    - img [cai rang floating market](chonoi)
+    - I want to see pictures of [cai rang floating market](chonoi)
+    - I want to see [cai rang floating market](chonoi)
+
+- intent: img_HungKingsTemple
+  examples: |
+    - the picture of [hung kings temple](HungKingTemple)
+    - image of [hung king temple](HungKingTemple)
+    - img [hung kings temple](HungKingTemple)
+    - I want to see pictures of [hung king temple](HungKingTemple)
+    - I want to see [hung kings temple](HungKingTemple)

@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<style>
+    table,
+    th,
+    td {
+        border: 1px solid;
+    }
+</style>
+
+<body>
+    <table>
+        <!-- header table -->
+        <tr>
+            <th scope="col">Tên</th>
+            <th scope="col">Code</th>
+            <th scope="col">Mã QR</th>
+            <th scope="col">Sửa</th>
+            <th scope="col">Xóa</th>
+
+        </tr>
+
+        <tr>
+            <td scope="row">{{ row[1] }}</td>
+            <td scope="row">{{ row[3] }}</td>
+            <td scopr="row"><img src="/static/QRCODE/{{row[4]}}.png" alt=""></td>
+            <td>
+                <button>Sua</button>
+            </td>
+            <td>
+                <button>Xoa</button>
+            </td>
+        </tr>
+    </table>
+</body>
+
+</html>

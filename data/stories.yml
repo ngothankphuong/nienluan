@@ -1,0 +1,98 @@
+version: "3.1"
+
+stories:
+
+- story: happy path
+  steps:
+  - intent: greet
+  - action: utter_greet
+
+- story: express thanks
+  steps:
+  - intent: thank
+  - action: utter_thank
+
+- story: goodbye
+  steps:
+  - intent: goodbye
+  - action: utter_goodbye
+
+- story: user borring
+  steps:
+  - intent: mood_unhappy
+  - action: utter_suggest
+
+- story: find_CanThoUn and deny
+  steps:
+  - intent: find_CanThoUn
+  - action: utter_CanThoUn
+  - intent: thank
+  - action: utter_ask
+  - intent: deny
+  - action: utter_thank
+
+- story: find_CanThoUn and agree
+  steps:
+  - intent: find_CanThoUn
+  - action: utter_CanThoUn
+  - intent: thank
+  - action: utter_ask
+  - intent: affirm
+  - action: utter_ask_address
+  - action: utter_ask
+
+- story: find address BenNinhKieu
+  steps:
+  - intent: find_BenNinhKieu
+  - action: utter_BenNinhKieu
+  - action: utter_ask
+  - intent: deny
+  - action: utter_thank
+
+- story: find cho noi
+  steps:
+  - intent: find_ChoNoi
+  - action: utter_ChoNoiCaiRang
+  - action: utter_ask
+  - intent: deny
+  - action: utter_thank
+
+- story: xem hinh anh dai hoc can tho
+  steps: 
+  - intent: img_CanThoUn
+  - action: utter_img_CanThoUn
+  
+- story: hinh anh ben ninh kieu
+  steps:
+  - intent: img_BenNinhKieu
+  - action: utter_img_BenNinhKieu
+  - intent: thank
+  - action: utter_thank
+
+- story: hinh anh ve cho noi cai rang
+  steps:
+  - intent: img_ChoNoi
+  - action: utter_img_ChoNoiCaiRang
+  - intent: thank
+  - action: utter_thank
+
+- story: address Hung king temple
+  steps:
+  - intent: find_HungKingTemple
+  - action: utter_DenHung
+  - action: utter_ask
+  - intent: deny
+  - action: utter_thank
+
+- story: img of hung king temple
+  steps:
+  - intent: img_HungKingsTemple
+  - action: utter_img_HungKingTemple
+
+- story: find address hung king temple
+  steps:
+  - intent: find_HungKingTemple
+  - action: utter_DenHung
+  - action: utter_ask
+  - intent: affirm
+  - action: utter_ask_address

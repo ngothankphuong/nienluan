@@ -1,0 +1,36 @@
+[
+  {
+    "tag_name": "entity",
+    "ids_to_tags": {
+      "1": "B-CanThoUn",
+      "2": "I-CanThoUn",
+      "3": "L-CanThoUn",
+      "4": "U-CanThoUn",
+      "5": "B-benninhkieu",
+      "6": "I-benninhkieu",
+      "7": "L-benninhkieu",
+      "8": "U-benninhkieu",
+      "9": "B-food",
+      "10": "I-food",
+      "11": "L-food",
+      "12": "U-food",
+      "0": "O"
+    },
+    "tags_to_ids": {
+      "B-CanThoUn": 1,
+      "I-CanThoUn": 2,
+      "L-CanThoUn": 3,
+      "U-CanThoUn": 4,
+      "B-benninhkieu": 5,
+      "I-benninhkieu": 6,
+      "L-benninhkieu": 7,
+      "U-benninhkieu": 8,
+      "B-food": 9,
+      "I-food": 10,
+      "L-food": 11,
+      "U-food": 12,
+      "O": 0
+    },
+    "num_tags": 13
+  }
+]
