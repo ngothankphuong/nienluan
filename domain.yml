@@ -21,6 +21,11 @@ intents:
   - img_ChoNoi
   - img_HungKingsTemple
   
+actions:
+  - action_extract_food_entity
+  - action_order_food
+  - action_confirm_order
+  - action_askAddress
 
 entities:
   - food
@@ -87,19 +92,15 @@ responses:
   - text: "https://vietnamtimes.org.vn/stores/news_dataimages/nhungnlh/042022/09/10/1610_ps1.jpg?rt=20220409113451.jpg"
   - text: "https://vietnamtimes.org.vn/stores/news_dataimages/nhungnlh/042022/09/10/1604_ps5.jpg?rt=20220409113351.jpg"
 
-
-
   utter_thank:
   - text: "Glad to serve you !!!"
 
   utter_iamabot:
   - text: "I am a rasa robot that helps find tourist destinations."
 
-actions:
-  - action_extract_food_entity
-  - action_order_food
-  - action_confirm_order
-  - action_askAddress
+# test
+  utter_order_pizza:
+  - text: "sure, what kind pizza you want"
 
 session_config:
   session_expiration_time: 60

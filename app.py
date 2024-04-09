@@ -186,7 +186,6 @@ reset_thread = threading.Thread(target=reset_url_scanned)
 reset_thread.daemon = True
 reset_thread.start()
 
-
 #QUET MA BANG CAMERA
 def generate_frames():
     global url_scanned
@@ -361,4 +360,3 @@ def scan_img():
 
 if __name__ == "__main__":
     app.run(debug=True, use_reloader=True)
-

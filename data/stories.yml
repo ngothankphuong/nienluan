@@ -45,8 +45,7 @@ stories:
   steps:
   - intent: find_BenNinhKieu
   - action: utter_BenNinhKieu
-  - action: utter_ask
-  - intent: deny
+  - intent: thank
   - action: utter_thank
 
 - story: find cho noi
@@ -96,3 +95,9 @@ stories:
   - action: utter_ask
   - intent: affirm
   - action: utter_ask_address
+
+# test
+- story: order pizza
+  steps:
+  - intent: order_pizza
+  - action: utter_order_pizza

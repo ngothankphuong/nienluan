@@ -126,8 +126,8 @@ nlu:
     - How to get to [Can Tho University](CanThoUn)
     - The way to reach [Can Tho University](CanThoUn)
     - Locating [Can Tho University](CanThoUn)
-    - Can Tho University
-    - cantho university
+    - [Can Tho University](CanThoUn)
+    - [cantho university](CanThoUn)
     - go to [can tho university](CanThoUn)
 
 - intent: find_ChoNoi
