@@ -1,191 +1,244 @@
 version: "3.1"
 
 nlu:
-- intent: greet
-  examples: |
-    - hey
-    - hello
-    - hi
-    - hello there
-    - good morning
-    - good evening
-    - moin
-    - hey there
-    - let's go
-    - hey dude
-    - goodmorning
-    - goodevening
-    - good afternoon
 
-- intent: goodbye
-  examples: |
-    - cu
-    - good by
-    - cee you later
-    - good night
-    - bye
-    - goodbye
-    - have a nice day
-    - see you around
-    - bye bye
-    - see you later
-    - good bye
-    - see you later
-    - bye
-    - goodbye
-    - bye bye
-    - have a nice day
-    - good night
+  - synonym: hình ảnh
+    examples: |
+      - 
 
-- intent: thank
-  examples: |
-    - thanks
-    - thank you
-    - many thanks
-    - appreciate it
+  - intent: greet
+    examples: |
+      - chào em
+      - hello em
+      - hi em
+      - em ơi, cho anh hỏi
+      - bot ơi
+      - cho mình hỏi chút
+      - hi
+      - hello
+      - chào
+      - xin chào
 
-- intent: order_pizza
-  examples: |
-    - give my [pizza](food)
-    - i want [pizza](food)
-    - can i get a [pizza](food)
-    - let's order [pizza](food)
-    - how about a [pizza](food)
+  - intent: goodbye
+    examples: |
+      - good bye
+      - bye bye
+      - tạm biệt em
+      - tạm biệt bot nhá
+      - cút
+      - hẹn gặp lại
 
-- intent: order_food
-  examples: |
-    - i want to order a food
-    - can i get some food, please
-    - let's order some food
+  - intent: thank
+    examples: |
+      - cảm ơn em nhá
+      - thanks em nha
+      - cảm ơn nha
+      - good job
+      - thank you
+      - cảm ơn bot nha
+      - thanks bot
+      - cảm ơn
+      - thank you so much
+      - great! thanks
+      - tk
+      - mơn
 
-- intent: inform_food
-  examples: |
-    - [steak](food)
-    - [orange](food)
-    - [salad](food)
-    - [sushi](food)
-    - [pasta](food)
-    - [pho](food)
+  - intent: deny
+    examples: |
+      - không
+      - k
+      - không bao giờ
+      - ko
+      - tôi nghĩ là ko
+      - 0
+      - o
+      - hong
+      - hông
+      - đéo
+      - éo
+      - méo
+      - t ko thích
+      - tôi không thích
 
-- intent: deny
-  examples: |
-    - no
-    - n
-    - never
-    - i don't think so
-    - don't like that
-    - no way
-    - not really
+  - intent: affirm
+    examples: |
+      - dĩ nhiên
+      - đồng ý
+      - chắc chắn
+      - tôi đồng ý 
+      - không vấn đề
 
-- intent: affirm
-  examples: |
-    - yes
-    - y
-    - ok
-    - oke
-    - okay
-    - of course
-    - correct
-    - that sounds good
+  - intent: mood_unhappy
+    examples: |
+      - ngày của tôi thật kinh khủng
+      - tôi buồn
+      - tôi cảm thấy không được khỏe lắm
+      - tôi thất vọng
+      - siêu buồn
+      - tôi rất buồn
+      - buồn
+      - rất buồn
+      - không vui
+      - không tốt
+      - không tốt lắm
+      - buồn vô cùng
+      - buồn quá
 
-- intent: mood_great
-  examples: |
-    - perfect
-    - great
-    - amazing
-    - feeling like a king
-    - wonderful
-    - i am great
-    - i am amazing
-    - i am feeling very good
+  - intent: bot_challenge
+    examples: |
+      - mày có phải là bot không
+      - mày là con người?
+      - bạn là ai
+      - tôi đang nói chuyện với bot phải không
+      - tôi có đang nói chuyện với con người không
+##################################################
+  - intent: ask_address_daihoccantho
+    examples: |
+      - Hướng dẫn tôi đến [trường đại học cần thơ](CanThoUn).
+      - Tôi muốn biết đường đến [đại học Cần Thơ](CanThoUn).
+      - Xin chỉ giúp tôi đường đi đến [CTU](CanThoUn).
+      - Tôi cần hướng dẫn để đến [ctu](CanThoUn).
+      - Cho tôi biết con đường tới [trường đại học trên đường 3/2](CanThoUn).
+      - Hãy chỉ dẫn cho tôi lối đi [trường đại học cần thơ đường 3 tháng 2](CanThoUn).
+      - Tôi đang tìm cách để đến [đại học cần thơ đường 3/2](CanThoUn).
+      - Có cách nào để đi đến [trường đại học Cần Thơ](CanThoUn) không
+      - Tôi quan tâm đến con đường tới [trường Đại học Cần Thơ](CanThoUn).
+      - Hướng dẫn về cách đi [Đại học CTU](CanThoUn) sẽ giúp ích cho tôi.
 
-- intent: mood_unhappy
-  examples: |
-    - i am sad
-    - so sad
-    - i am borring
-    - sad
-    - verry sad
-    - i want go to somewhere
-    - not good
-    - unhappy
-    - I want to go out
-    - I want to go for a walk
+      - [Đại học Cần Thơ](CanThoUn) ở đâu
+      - Vị trí của [trường Đại học Cần Thơ](CanThoUn) là ở đâu
+      - Tôi cần biết địa chỉ của [ctu](CanThoUn)
+      - Muốn tìm [trường Cần Thơ](CanThoUn), tôi phải đi đến đâu
+      - Ở đâu là vị trí của [Đại học Cần Thơ](CanThoUn)
+      - Cho tôi biết nơi [Đại học Cần Thơ](CanThoUn) trên bản đồ
 
-- intent: bot_challenge
-  examples: |
-    - are you bot?
-    - are you human
-    - am i talking to a bot?
-    - am i talking to a human?
+  - intent: ask_address_benninhkieu
+    examples: |
+      - Hướng dẫn tôi đến [bến ninh kiều](benninhkieu).
+      - Tôi muốn biết đường đến [Bến Ninh Kiều](benninhkieu).
+      - Xin chỉ giúp tôi đường đi đến [Bến ninh kiều tại Cần thơ](benninhkieu).
+      - Tôi cần hướng dẫn để đến [bờ kè ninh kiều](benninhkieu).
+      - Cho tôi biết con đường tới [ninh kiều](benninhkieu).
+      - Hãy chỉ dẫn cho tôi lối đi [ninh kiều cần thơ](benninhkieu).
+      - Tôi đang tìm cách để đến [ninh kiều ở cần thơ](benninhkieu).
+      - Có cách nào để đi đến [bến NK](benninhkieu) không?
+      - Tôi quan tâm đến con đường tới [Ninh Kiều](benninhkieu).
+      - Hướng dẫn về cách đi [Bến Ninh Kiều](benninhkieu) sẽ giúp ích cho tôi.
 
-- intent: find_CanThoUn
-  examples: |
-    - the way to [Can Tho University](CanThoUn)
-    - The route to [Can Tho University](CanThoUn)
-    - How to get to [Can Tho University](CanThoUn)
-    - The way to reach [Can Tho University](CanThoUn)
-    - Locating [Can Tho University](CanThoUn)
-    - [Can Tho University](CanThoUn)
-    - [cantho university](CanThoUn)
-    - go to [can tho university](CanThoUn)
+      - [Bến ninh kiều](benninhkieu) ở đâu
+      - Vị trí của [ninh kiều cần thơ](benninhkieu) là ở đâu
+      - Tôi cần biết địa chỉ của [bến NK](benninhkieu)
+      - Muốn tìm [Ninh Kiều](benninhkieu), tôi phải đi đến đâu
+      - Ở đâu là vị trí của [bờ kè ninh kiều](benninhkieu)
+      - Cho tôi biết nơi [bến ninh kiều](benninhkieu) trên bản đồ
 
-- intent: find_ChoNoi
-  examples: |
-    - the way to [cai rang floating market](chonoi)
-    - The route to [cai rang floating market](chonoi)
-    - How to get to [cai rang floating market](chonoi)
-    - The way to reach [cai rang floating market](chonoi)
-    - Locating [cai rang floating market](chonoi)
-    - cai rang floating market
-    - go to [cai rang floating market](chonoi)
+  - intent: asK_address_denhung
+    examples: |
+      - Hướng dẫn tôi đến [Đền Hùng](denhung).
+      - Tôi muốn biết đường đến [đền thơ vua Hùng](denhung).
+      - Xin chỉ giúp tôi đường đi đến [Đền Hùng tại Cần Thơ](denhung).
+      - Tôi cần hướng dẫn để đến [Đền Hùng Vương](denhung).
+      - Cho tôi biết con đường tới [đền vua hùng vương](denhung).
+      - Hãy chỉ dẫn cho tôi lối đi [đền thờ vua Hùng Vương](denhung).
+      - Tôi đang tìm cách để đến [Đền thờ vua Hùng](denhung).
+      - Có cách nào để đi đến [đền Hùng Vương](denhung) không?
+      - Tôi quan tâm đến con đường tới [vua Hùng Vương](denhung).
+      - Hướng dẫn về cách đi [đền hùng](denhung) sẽ giúp ích cho tôi.
 
+      - [Đền Hùng tại Cần Thơ](denhung) ở đâu
+      - Vị trí của [Đền vua Hùng vương ở Cần Thơ](denhung) là ở đâu
+      - Tôi cần biết địa chỉ của [Đền Hùng tại CT](denhung)
+      - Muốn tìm [Đền vua Hùng ở CT](denhung), tôi phải đi đến đâu
+      - Ở đâu là vị trí của [Đền Hùng](denhung)
+      - Cho tôi biết nơi [đền hùng](denhung) trên bản đồ
 
-- intent: find_BenNinhKieu
-  examples: |
-    - the way to [Ninh Kieu wharf](benninhkieu)
-    - The route to [Ninh Kieu wharf](benninhkieu)
-    - How to get to [Ninh Kieu wharf](benninhkieu)
-    - The way to reach [Ninh Kieu wharf](benninhkieu)
-    - Locating [Ninh Kieu wharf](benninhkieu)
-    - go to [ninh kieu wharf](benninhkieu)
+  - intent: ask_address_langhoasadec
+    examples: |
+      - Hướng dẫn tôi đến [Làng Hoa Sa Đéc](langHoa).
+      - Tôi muốn biết đường đến [làng hoa ở sa đéc](langHoa).
+      - Xin chỉ giúp tôi đường đi đến [làng hoa SĐ](langHoa).
+      - Tôi cần hướng dẫn để đến [Làng hoa tại Sa Đéc](langHoa).
+      - Cho tôi biết con đường tới [làng hoa sa đéc](langHoa).
+      - Hãy chỉ dẫn cho tôi lối đi [làng hoa ở SD](langHoa).
+      - Tôi đang tìm cách để đến [lang hoa sa dec](langHoa).
+      - Có cách nào để đi đến [Lang Hoa Sa Dec](langHoa) không?
+      - Tôi quan tâm đến con đường tới [Lang Hoa Sa Dec](langHoa).
+      - Hướng dẫn về cách đi [làng hoa sa đéc](langHoa) sẽ giúp ích cho tôi.
 
-- intent: find_HungKingTemple
-  examples: |
-    - the way to [hung king's temple](HungKingTemple)
-    - The route to [hung king temple](HungKingTemple)
-    - How to get to [hung king's temple](HungKingTemple)
-    - The way to reach [hung king temple](HungKingTemple)
-    - Locating [hung king's temple](HungKingTemple)
-    - go to [hung kings temple](HungKingTemple)
+      - [LÀNG HOA SA ĐÉC](langHoa) ở đâu
+      - Vị trí của [Làng hoa SĐ](langHoa) là ở đâu
+      - Tôi cần biết địa chỉ của [lang hoa](langHoa)
+      - Muốn tìm [Làng hoa sa đéc](langHoa), tôi phải đi đến đâu
+      - Ở đâu là vị trí của [LH Sa Đéc](langHoa)
+      - Cho tôi biết nơi [làng hoa ở sa đéc](langHoa) trên bản đồ
 
-- intent: img_CanThoUn
-  examples: |
-    - the picture of [can tho university](CanThoUn)
-    - image of [can tho university](CanThoUn)
-    - i want to see pictures of [Can tho university](CanThoUn)
-    - i want to see [Can tho university](CanThoUn)
+  - intent: ask_address_chonoicairang
+    examples: |
+      - Hướng dẫn tôi đến [chợ nổi Cái Răng](chonoicairang).
+      - Tôi muốn biết đường đến [Chợ nổi](chonoicairang).
+      - Xin chỉ giúp tôi đường đi đến [chợ nổi ở cần thơ](chonoicairang).
+      - Tôi cần hướng dẫn để đến [chợ nổi tại CT](chonoicairang).
+      - Cho tôi biết con đường tới [chợ nổi cái răng ở cần thơ]](chonoicairang).
+      - Hãy chỉ dẫn cho tôi lối đi [chợ nổi cần thơ](chonoicairang).
+      - Tôi đang tìm cách để đến [chợ nổi ở cần thơ](chonoicairang).
+      - Có cách nào để đi đến [chợ nổi NK](chonoicairang) không?
+      - Tôi quan tâm đến con đường tới [cho noi cai rang](chonoicairang).
+      - Hướng dẫn về cách đi [chợ nổi cái răng CT](chonoicairang) sẽ giúp ích cho tôi.
 
-- intent: img_BenNinhKieu
-  examples: |
-    - the picture of [ninh kieu wharf](benninhkieu)
-    - image of [ninh kieu wharf](benninhkieu)
-    - img [ninh kieu wharf](benninhkieu)
-    - I want to see pictures of [Ninh Kieu wharf](benninhkieu)
-    - I want to see [Ninh Kieu wharf](benninhkieu)
+      - [Chợ Nổi Cái Răng](chonoicairang) ở đâu
+      - Vị trí của [chợ nổi ](chonoicairang) là ở đâu
+      - Tôi cần biết địa chỉ của [bến NK](chonoicairang)
+      - Muốn tìm [Chợ nổi](chonoicairang), tôi phải đi đến đâu
+      - Ở đâu là vị trí của [chợ nổi cái răng cần thơ](chonoicairang)
+      - Cho tôi biết nơi [chợ nổi ở cần thơ](chonoicairang) trên bản đồ
+####################################
+  - intent: ask_img_CanThoUn
+    examples: |
+      - Hình ảnh về [Đại học Cần Thơ](CanThoUn)
+      - Cho tôi xem ảnh của [CTU](CanThoUn)
+      - hình ảnh về [trường đại học Cần Thơ](CanThoUn)
+      - tôi muốn xem [trường Cần Thơ](CanThoUn)
+      - tôi muốn thấy [Đại học Cần Thơ](CanThoUn)
+      - tôi muốn ngắm nhìn [Đại học Cần Thơ](CanThoUn)
+      - ảnh của [trường Đại học Cần Thơ](CanThoUn)
 
-- intent: img_ChoNoi
-  examples: |
-    - the picture of [Cai Rang foating market](chonoi)
-    - image of [cai rang floating market](chonoi)
-    - img [cai rang floating market](chonoi)
-    - I want to see pictures of [cai rang floating market](chonoi)
-    - I want to see [cai rang floating market](chonoi)
+  - intent: ask_img_BenNinhKieu
+    examples: |
+      - Hình ảnh về [Bến Ninh Kiều](benninhkieu)
+      - Cho tôi xem ảnh của [bến ninh kiều](benninhkieu)
+      - hình ảnh về [bến ninh kiều](benninhkieu)
+      - tôi muốn xem [Bến ninh kiều](benninhkieu)
+      - tôi muốn thấy [Bến NK](benninhkieu)
+      - tôi muốn ngắm nhìn [Bờ kè bến ninh kiều](benninhkieu)
+      - ảnh của [Bờ kè bến ninh kiều](benninhkieu)
+      - cho tôi xem cảnh quan của [bến ninh kiều](benninhkieu)
 
-- intent: img_HungKingsTemple
-  examples: |
-    - the picture of [hung kings temple](HungKingTemple)
-    - image of [hung king temple](HungKingTemple)
-    - img [hung kings temple](HungKingTemple)
-    - I want to see pictures of [hung king temple](HungKingTemple)
-    - I want to see [hung kings temple](HungKingTemple)
+  - intent: ask_img_ChoNoi
+    examples: |
+      - Hình ảnh về [chợ nổi Cần Thơ](chonoi)
+      - Cho tôi xem ảnhcủa [chợ nổi Cái Răng](chonoi)
+      - hình ảnh về [chợ nổi Cái Răng Cần Thơ](chonoi)
+      - tôi muốn xem [chợ nổi ở cần thơ](chonoi)
+      - tôi muốn thấy [chợ nổi Cái Răng](chonoi)
+      - tôi muốn ngắm nhìn [Chợ nổi Cái Răng ở CT](chonoi)
+      - ảnh của [chợ nổi CT](chonoi)
+
+  - intent: ask_img_HungKingsTemple
+    examples: |
+      - Hình ảnh về [đền Hùng](denhung)
+      - Cho tôi xem ảnh của [đền thờ Hùng Vương](denhung)
+      - hình ảnh về [đền vua Hùng](denhung)
+      - tôi muốn xem [đền thơ vua Hùng](denhung)
+      - tôi muốn thấy [đền Hùng vương](denhung)
+      - tôi muốn ngắm nhìn [đền Hùng CT](denhung)
+      - ảnh của [đền Hùng ở CT](denhung)
+
+  - intent: ask_img_LangHoaSD
+    examples: |
+      - Hình ảnh về [Làng hoa Sa đéc](langHoa)
+      - Cho tôi xem ảnh của [làng Hoa](langHoa)
+      - hình ảnh về [làng hoa sa đéc](langHoa)
+      - tôi muốn xem [làng hoa](langHoa)
+      - tôi muốn thấy [hình ảnh của làng hòa ở sa đéc](langHoa)
+      - tôi muốn ngắm nhìn [làng hoa](langHoa)
+      - ảnh của [làng hoa sa đéc](langHoa)

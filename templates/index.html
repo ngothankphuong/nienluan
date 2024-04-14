@@ -27,7 +27,7 @@
         }
 
         #chat-widget-messages {
-            max-height: 400px;
+            max-height: 500px;
             overflow-y: scroll;
             scroll-behavior: smooth;
             
@@ -114,24 +114,18 @@
         style="bottom: 20px; left:20px;"></button>
 
     <!-- chat bot -->
-    <div id="chat-widget" class="card position-fixed shadow d-none" style="bottom: 100px; left:20px; width:300px; height: 500px;">
+    <div id="chat-widget" class="card position-fixed shadow d-none" style="bottom: 100px; left:20px; width:400px; height: 600px;">
         <div class="card-header bg-primary text-white">
-            Bot Travel Can Tho
+            Travel Bot
             <button id="chat-widget-close-button" type="button" class="btn-close float-end" aria-label="Close"></button>
         </div>
         <div class="card-body" id="chat-widget-messages">
             <!-- chat message append -->
         </div>
         <div class="card-footer">
-            <input type="text" class="form-control" id="chat-widget-input" placeholder="Type your message...">
+            <input required type="text" class="form-control" id="chat-widget-input" placeholder="Type your message...">
         </div>
     </div>
-
-
-    <!-- The Modal -->
-    <!-- Trigger the Modal -->
-    <!-- <img class="myImg" src="https://static.kinhtedothi.vn/w960/images/upload/2022/10/10/3aa3f7ac1cbfdbe182ae.jpg" alt="Trolltunga, Norway" width="300" height="200">
-    <img class="myImg" src="https://st.depositphotos.com/1007989/1360/i/950/depositphotos_13604679-stock-illustration-letters-shapes-and-crayons.jpg" alt="Trolltunga, Norway" width="300" height="200"> -->
 
     <!-- The Modal -->
     <div id="myModal" class="modal">
@@ -150,9 +144,7 @@
     <script src="../static/js/bat_cam.js"></script>
     <script src="../static/js/chat_bot_rasa.js"></script>
     <script src="../static/js/modal_image.js"></script>
-    <script src="https://www.gstatic.com/dialogflow-console/fast/messenger/bootstrap.js?v=1"></script>
-    <df-messenger intent="WELCOME" chat-title="Bot-Du-Lich" agent-id="84c9f868-c285-484b-8ae0-9d431039bd9f"
-        language-code="vi"></df-messenger>
+
 
 </body>
 

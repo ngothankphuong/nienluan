@@ -14,6 +14,7 @@ from flask import g
 from flask import current_app, flash, jsonify, make_response
 from selenium import webdriver
 import time
+
 import subprocess
 import pkg_resources
 import httpx
@@ -49,7 +50,7 @@ def webhook():
     rasa_response = requests.post(RASA_API_URL, json={'message': userMess})
     rasa_response.raise_for_status()
     rasa_response_json = rasa_response.json()
-    print('Bot Response:', rasa_response_json[0]['text'])  # In ra phản hồi từ máy chủ RASA API
+    print('Bot Response:', rasa_response_json[0]['text'])  # phản hồi từ RASA 
     bot_response = rasa_response_json[0]['text'] if rasa_response_json else 'Sorry, I didn\'t understand that.'
     # print(type(bot_response))
     return bot_response
@@ -202,8 +203,7 @@ def generate_frames():
                     print("KET QUA SCAN LA", result_scan)
                     getURL(result_scan)
                     url_scanned.add(result_scan)
-                    #alert code in html
-                    #alert_code = "<script>alert('SCAN SUCCESS');</script>"
+
             ret, buffer = cv2.imencode('.jpg', frame)
             frame = buffer.tobytes()
             yield (b'--frame\r\n'  b'Content-Type: image/jpeg\r\n\r\n' + frame )
@@ -217,12 +217,13 @@ def getURL(code):
     sql = "SELECT url_google_map FROM diadiem WHERE code = %s"
     mycursor.execute(sql, (code, ))
     myresult = mycursor.fetchall()
+    print(myresult)
     if (myresult == []):
-        return "CODE INVALID"
+        print("Code không tồn tại")
     else :
         data= myresult[0][0]
         webbrowser.open_new(data)
-        return "SCAN SUCCESS"
+        print("Scan thành công")
 
 #bat camera
 @app.route("/on_cam", methods=["POST"])

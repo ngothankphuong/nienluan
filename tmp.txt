@@ -1,6 +1,10 @@
-$ajax({
-                type: 'POST',
-                url : '/login',
-                contentType: 'application/json',
-                data: JSON.stringify(data),
-            });
+- Hướng dẫn tôi đến Đền Hùng.
+- Tôi muốn biết đường đến Đền Hùng.
+- Xin chỉ giúp tôi đường đi Đền Hùng.
+- Tôi cần hướng dẫn để đến Đền Hùng.
+- Cho tôi biết con đường tới Đền Hùng.
+- Hãy chỉ dẫn cho tôi lối đi Đền Hùng.
+- Tôi đang tìm cách để đến Đền Hùng.
+- Có cách nào để đi đến Đền Hùng không?
+- Tôi quan tâm đến con đường tới Đền Hùng.
+- Hướng dẫn về cách đi Đền Hùng sẽ giúp ích cho tôi.

@@ -24,10 +24,10 @@
             <div class="collapse navbar-collapse" id="navbarTogglerDemo03">
                 <ul class="navbar-nav me-auto mb-2 mb-lg-0">
                     <li class="nav-item mr-5">
-                        <a class="nav-link active btn btn-sm btn-primary" aria-current="page" href="/">Home</a>
+                        <a class="nav-link active btn btn-sm btn-primary text-white" aria-current="page" href="/">Home</a>
                     </li>
                     <li class="nav-item">
-                        <a class="nav-link active btn btn-sm btn-danger"href="/manage">Quản lý mã QR</a>
+                        <a class="nav-link active btn btn-sm btn-danger text-white"href="/manage">Quản lý mã QR</a>
                     </li>
                 </ul>
                 <div class="d-flex" role="search">
@@ -42,7 +42,6 @@
         <thead>
             <tr>
                 <th scope="col">Tên</th>
-                <th scope="col">Code</th>
                 <th scope="col">Mã QR</th>
                 <th scope="col">Sửa</th>
                 <th scope="col">Xóa</th>
@@ -52,8 +51,7 @@
             {% for row in data_search %}
             <tr>
                 <td scope="row">{{ row[1] }}</td>
-                <td scope="row">{{row[3]}}</td>
-                <td scopr="row"><img src="/static/img/{{row[4]}}.png" alt=""></td>
+                <td scopr="row"><img src="/static/QRCODE/{{row[4]}}.png" alt=""></td>
                 <td>
                     <div class="group-edit">
                         <input id="input_id" class="input_id" type="hidden" value="{{row[0]}}" />

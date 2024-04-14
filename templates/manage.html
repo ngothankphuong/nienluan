@@ -31,10 +31,10 @@
             <div class="collapse navbar-collapse" id="navbarTogglerDemo03">
                 <ul class="navbar-nav me-auto mb-2 mb-lg-0">
                     <li class="nav-item mr-5">
-                        <a class="nav-link active btn btn-sm btn-primary me-3" aria-current="page" href="/">Home</a>
+                        <a class="nav-link active btn btn-sm btn-primary me-3 text-white" aria-current="page" href="/">Trang chủ</a>
                     </li>
                     <li class="nav-item">
-                        <a class="nav-link active btn btn-sm btn-danger" href="/create_page">Tạo mã QR</a>
+                        <a class="nav-link active btn btn-sm btn-danger text-white" href="/create_page">Tạo mã QR</a>
                     </li>
                 </ul>
                 <!-- search group -->
@@ -60,7 +60,7 @@
         <thead>
             <tr>
                 <th scope="col">Tên</th>
-                <th scope="col">Code</th>
+                <!-- <th scope="col">Code</th> -->
                 <th scope="col">Mã QR</th>
                 <th scope="col">Sửa</th>
                 <th scope="col">Xóa</th>
@@ -70,7 +70,7 @@
             {% for row in data_list %}
             <tr>
                 <td scope="row">{{ row[1] }}</td>
-                <td scope="row">{{row[3]}}</td>
+                <!-- <td scope="row">{{row[3]}}</td> -->
                 <td scopr="row"><img src="/static/QRCODE/{{row[4]}}.png" alt=""></td>
                 <td>
                     <div class="group-edit">

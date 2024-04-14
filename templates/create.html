@@ -31,14 +31,14 @@
     <a class="btn btn-sm btn-success" href="/manage">Quản lý mã QR</a>
     <form action="/create" class="form-inline container" method="POST">
         <label class="sr-only" for="inlineFormInputName1">Tên địa điểm</label>
-        <textarea id="inlineFormInputName1" class="form-control mb-2 mr-sm-2" name="input_name" id="" cols="60" rows="4" placeholder="VD : Cần thơ"></textarea>
+        <textarea required id="inlineFormInputName1" class="form-control mb-2 mr-sm-2" name="input_name" id="" cols="60" rows="4" placeholder="VD : Cần thơ"></textarea>
 
         <label class="sr-only" for="inlineFormInputGroupUsername2">Vị trí</label>
-        <textarea  name="input_location" class="form-control" id="inlineFormInputGroupUsername2"
+        <textarea required name="input_location" class="form-control" id="inlineFormInputGroupUsername2"
         placeholder="Vị trí trên google map" cols="30" rows="4"></textarea>
 
         <label class="sr-only" for="inlineFormInputGroupUsername3">Tên ảnh</label>
-        <textarea name="input_name_img" class="form-control" id="inlineFormInputGroupUsername3"
+        <textarea required name="input_name_img" class="form-control" id="inlineFormInputGroupUsername3"
         placeholder="Tên ảnh QR" cols="30" rows="4"></textarea>
 
         <button type="submit" class="btn btn-primary mb-2">Tạo mã QR</button>

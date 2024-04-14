@@ -1,0 +1,52 @@
+[
+  {
+    "tag_name": "entity",
+    "ids_to_tags": {
+      "1": "B-CanThoUn",
+      "2": "I-CanThoUn",
+      "3": "L-CanThoUn",
+      "4": "U-CanThoUn",
+      "5": "B-benninhkieu",
+      "6": "I-benninhkieu",
+      "7": "L-benninhkieu",
+      "8": "U-benninhkieu",
+      "9": "B-chonoi",
+      "10": "I-chonoi",
+      "11": "L-chonoi",
+      "12": "U-chonoi",
+      "13": "B-denhung",
+      "14": "I-denhung",
+      "15": "L-denhung",
+      "16": "U-denhung",
+      "17": "B-langHoa",
+      "18": "I-langHoa",
+      "19": "L-langHoa",
+      "20": "U-langHoa",
+      "0": "O"
+    },
+    "tags_to_ids": {
+      "B-CanThoUn": 1,
+      "I-CanThoUn": 2,
+      "L-CanThoUn": 3,
+      "U-CanThoUn": 4,
+      "B-benninhkieu": 5,
+      "I-benninhkieu": 6,
+      "L-benninhkieu": 7,
+      "U-benninhkieu": 8,
+      "B-chonoi": 9,
+      "I-chonoi": 10,
+      "L-chonoi": 11,
+      "U-chonoi": 12,
+      "B-denhung": 13,
+      "I-denhung": 14,
+      "L-denhung": 15,
+      "U-denhung": 16,
+      "B-langHoa": 17,
+      "I-langHoa": 18,
+      "L-langHoa": 19,
+      "U-langHoa": 20,
+      "O": 0
+    },
+    "num_tags": 21
+  }
+]

@@ -12,44 +12,57 @@ $(document).ready(function () {
 
     $("#chat-widget-input").keypress(function (event) {
         if (event.which == 13) {
-            let userMessage = $("#chat-widget-input").val();
+            let strInput = $("#chat-widget-input").val();
             $("#chat-widget-input").val("");
 
-            $("#chat-widget-messages").append("<div><strong>You: </strong>" + userMessage +"</div>");
-            scrollChatToBottom();
-            data_send = {
-                'message': userMessage
-            }
-            $.ajax({
-                type: "POST",
-                url: "/webhook",
-                contentType: "application/json",
-                data: JSON.stringify({
-                    message: userMessage
-                }),
-                success: function (res) {
-                    console.log(res);
-                    if (res.endsWith(".jpg") || res.endsWith(".png")) {
-                        var img ='<img class="myImg" style="width:100%;max-width:300px" src="' +res+'" alt="Image" />';
-                        $("#chat-widget-messages").append("<div ><strong class='text-danger'>Bot:</strong> " + img + "</div>");
-
-                        // click de hien thi modal hinh anh
-                        $("#chat-widget-messages .myImg").last().on("click", function() {
-                            displayImageModal(this.src);
-                        });
-
-                    } else if (res && res.startsWith("https")) {
-                        var link = '<a class="text-info" href="' + res + '" target="_blank">' + res + '</a>';
-                        $("#chat-widget-messages").append("<div><strong class='text-danger'>Bot:</strong> " + link + "</div>");
-                    } else {
-                        $("#chat-widget-messages").append("<div><strong class='text-danger'>Bot:</strong> " + res + "</div>");
-                    }
+            var regex = /[0-9!@#$%^&*(),.?":{}|<>]/;
+            userMessage = strInput.trim()
+            if (userMessage != "") {
+                if (!regex.test(userMessage)) {
+                    $("#chat-widget-messages").append("<div><strong>You: </strong>" + userMessage + "</div>");
                     scrollChatToBottom();
-                },
-                error: function (error) {
-                    console.log('lỗi ');
+                    data_send = {
+                        'message': userMessage
+                    }
+                    $.ajax({
+                        type: "POST",
+                        url: "/webhook",
+                        contentType: "application/json",
+                        data: JSON.stringify({
+                            message: userMessage
+                        }),
+                        success: function (res) {
+                            console.log(res);
+                            if (res.endsWith(".jpg") || res.endsWith(".png") || res.endsWith(".jpeg")) {
+                                var img = '<img class="myImg" style="width:100%;max-width:300px" src="' + res + '" alt="Image" />';
+                                $("#chat-widget-messages").append("<div ><strong class='text-danger'>Bot:</strong> " + img + "</div>");
+
+                                // click de hien thi modal hinh anh
+                                $("#chat-widget-messages .myImg").last().on("click", function () {
+                                    displayImageModal(this.src);
+                                });
+
+                            } else if (res && res.startsWith("https")) {
+                                var link = '<a class="text-info" href="' + res + '" target="_blank">' + res + '</a>';
+                                $("#chat-widget-messages").append("<div><strong class='text-danger'>Bot:</strong> " + link + "</div>");
+                            } else {
+                                $("#chat-widget-messages").append("<div><strong class='text-danger'>Bot:</strong> " + res + "</div>");
+                            }
+                            scrollChatToBottom();
+                        },
+                        error: function (error) {
+                            console.log('lỗi ');
+                        }
+                    });
                 }
-            });
+                else {
+                    alert("Xin lỗi, tôi chưa thể xử số và ký tự đặc biệt !!!")
+                }
+            } else {
+                alert("Vui lòng nhập yêu cầu !!!")
+            }
+
+
         }
     });
 
@@ -57,6 +70,7 @@ $(document).ready(function () {
         var chatWidget = document.getElementById("chat-widget-messages");
         chatWidget.scrollTop = chatWidget.scrollHeight;
     }
+
     function isUserAtBottom() {
         var chatWidget = document.getElementById("chat-widget-messages");
         return chatWidget.scrollHeight - chatWidget.clientHeight <= chatWidget.scrollTop + 1;
